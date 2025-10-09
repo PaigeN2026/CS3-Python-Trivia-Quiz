@@ -1,10 +1,3 @@
-def main():
-    print("Starting a new Trivia game...")
-    user_name = input("Enter your name: ")
-    print(f"Welcome, {user_name}!")
-
-main()
-
 trivia1 = [
     {
         'question': 'the first avenger',
@@ -15,16 +8,16 @@ trivia1 = [
         'answer': 'thor',
     },
     {
-        'question': 'the first avenger',
-        'answer': 'captian america',
+        'question': 'days of future past',
+        'answer': 'x-men',
     },
     {
         'question': 'the incredible',
-        'answer': 'captian america',
+        'answer': 'hulk',
     },
     {
         'question': 'the wasp',
-        'answer': 'antman',
+        'answer': 'ant-man',
     }
 ]
 
@@ -65,11 +58,65 @@ trivia3 = [
         'answer': 'scarlet witch',
     },
     {
-        'question': '',
-        'answer': 'captian amermaica',
+        'question': '_a_e_e_i_',
+        'answer': 'daredevil',
     },
     {
-        'question': 'the wasp',
-        'answer': 'captian marvel',
+        'question': 'sue storm',
+        'answer': '_ue __o__',
     }
 ]
+
+trivia4 = [
+    {
+        'question': '🕷️🧑‍🦰🕸️🏙️',
+        'answer': 'spiderman',
+    },
+    {
+        'question': '💎👱‍♀️🧊🧠',
+        'answer': 'emma frost',
+    },
+    {
+        'question': '🔥🧑‍🚀💨🌟',
+        'answer': 'human torch',
+    },
+    {
+        'question': '🕷️🖤🕶️🔫',
+        'answer': 'black widow',
+    },
+    {
+        'question': '🪖❄️🔪🦾',
+        'answer': 'winter soldier',
+    }
+]
+
+def ask_q(question, answer):
+    is_correct = False
+    # Display the question -> loop
+    print(question)
+    # Take user input -> input('').lower()
+    user_answer = input("answer: ").lower()
+    if user_answer == answer:
+        print("Correct!")
+    else:
+        print("Incorrect.")
+    # Check if user input matches correct answer -> conditions
+    return is_correct
+
+
+# calculate_score(total_questions, num_correct)
+
+def main():
+    print("Starting a new Marvel trivia game...")
+    user_name = input("Enter your name: ")
+    print(f"Welcome, {user_name}!")
+    print(f"⎯⎯⎯⟡⎯⎯⎯◎⎯⎯⎯⟡⎯⎯⎯")
+    # Test out your ask_q function
+        
+    print(f"Identify the character or team from the clue.")
+    for question in trivia1:
+        q = question['question']
+        a = question['answer']
+        ask_q(q, a)
+        print(f"")
+main()
